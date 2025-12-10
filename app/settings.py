@@ -30,6 +30,8 @@ DEBUG = os.getenv("DEBUG", "True") == "True"
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = "users.User"
+
 
 # Application definition
 
@@ -44,8 +46,8 @@ INSTALLED_APPS = [
     "rest_framework",
 
     # Local apps (on ajoute core juste après)
-    # "core",
-    # "user", 
+    "core",
+    "users",
 ]
 
 MIDDLEWARE = [
